@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="pl-PL" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <rule id="rootRule">
+    <ruleref uri="#volumeValue" />
+    <tag> out.volumeValue=rules.latest(); </tag>
+  </rule>
+
+  <rule id="volumeValue">
+    <one-of>
+      <item repeat="0-1">
+        dziesięć<tag>out=10</tag>
+      </item>
+      <item repeat="0-1">
+        dwadzieścia<tag>out=20</tag>
+      </item>
+      <item repeat="0-1">
+        trzydzieści<tag>out=30</tag>
+      </item>
+      <item repeat="0-1">
+        czterdzieści<tag>out=40</tag>
+      </item>
+      <item repeat="0-1">
+        pięćdziesiąt<tag>out=50</tag>
+      </item>
+      <item repeat="0-1">
+        sześćdziesiąt<tag>out=60</tag>
+      </item>
+      <item repeat="0-1">
+        siedemdziesiąt<tag>out=70</tag>
+      </item>
+      <item repeat="0-1">
+        osiemdziesiąt<tag>out=80</tag>
+      </item>
+      <item repeat="0-1">
+        dziewięćdziesiąt<tag>out=90</tag>
+      </item>
+      <item repeat="0-1">
+        sto<tag>out=100</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

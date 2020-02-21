@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="pl-PL" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <rule id="rootRule">
+    <ruleref uri="#commandRule" />
+    <tag> out.command=rules.latest(); </tag>
+    <item repeat="0-1">o</item>
+    <item repeat="0-1">
+      <ruleref uri="#volumeValue" />
+      <tag> out.volumeValue=rules.latest(); </tag>
+    </item>
+    <item repeat="0-1">na</item>
+    <item repeat="0-1">
+      <ruleref uri="#channelList" />
+    <tag> out.channelList=rules.latest(); </tag>
+    </item>
+  </rule>
+  
+  <rule id="commandRule">
+    <one-of>
+      <item>
+        Zwiększ głośność<tag>out="volumeUp"</tag>
+      </item>
+      <item>
+        Daj głośniej<tag>out="volumeUp"</tag>
+      </item>
+      <item>
+        Podnieś głośność<tag>out="volumeUp"</tag>
+      </item>
+      <item>
+        Podgłośnij<tag>out="volumeUp"</tag>
+      </item>
+
+      <item>
+        Zmniejsz głośność<tag>out="volumeDown"</tag>
+      </item>
+      <item>
+        Daj ciszej<tag>out="volumeDown"</tag>
+      </item>
+      <item>
+        Obniż głośność<tag>out="volumeDown"</tag>
+      </item>
+      <item>
+        Ścisz<tag>out="volumeDown"</tag>
+      </item>
+
+      <item>
+        Wyłącz dźwięk<tag>out="volumeOff"</tag>
+      </item>
+      <item>
+        Włącz wyciszenie<tag>out="volumeOff"</tag>
+      </item>
+      <item>
+        Wycisz dźwięk<tag>out="volumeOff"</tag>
+      </item>
+
+      <item>
+        Włącz dźwięk<tag>out="volumeOn"</tag>
+      </item>
+      <item>
+        Wyłącz wyciszenie<tag>out="volumeOn"</tag>
+      </item>
+      <item>
+        Odcisz dźwięk<tag>out="volumeOn"</tag>
+      </item>
+
+      <item>
+        Poziom głośności<tag>out="volumeLevel"</tag>
+      </item>
+      <item>
+        Podaj poziom głośności<tag>out="volumeLevel"</tag>
+      </item>
+      <item>
+        Jaki jest poziom głośności<tag>out="volumeLevel"</tag>
+      </item>
+
+      <item>
+        Wyłącz dźwięk<tag>out="volumeOff"</tag>
+      </item>
+      <item>
+        Włącz wyciszenie<tag>out="volumeOff"</tag>
+      </item>
+      <item>
+        Wycisz dźwięk<tag>out="volumeOff"</tag>
+      </item>
+
+      <item>
+        Włącz dźwięk<tag>out="volumeOn"</tag>
+      </item>
+      <item>
+        Wyłącz wyciszenie<tag>out="volumeOn"</tag>
+      </item>
+      <item>
+        Odcisz dźwięk<tag>out="volumeOn"</tag>
+      </item>
+
+      <item>
+        Poziom głośności<tag>out="volumeLevel"</tag>
+      </item>
+      <item>
+        Podaj poziom głośności<tag>out="volumeLevel"</tag>
+      </item>
+
+      <item>
+        Zmień program<tag>out="changeChannel"</tag>
+      </item>
+      <item>
+        Zmień kanał<tag>out="changeChannel"</tag>
+      </item>
+      <item>
+        Przełącz program<tag>out="changeChannel"</tag>
+      </item>
+      <item>
+        Przełącz kanał<tag>out="changeChannel"</tag>
+      </item>
+
+      <item>
+        Jaki to program<tag>out="currentChannel"</tag>
+      </item>
+      <item>
+        Jaki to kanał<tag>out="currentChannel"</tag>
+      </item>
+      <item>
+        Podaj obecny kanał<tag>out="currentChannel"</tag>
+      </item>
+
+      <item>
+        Włącz nagrywanie<tag>out="recordingOn"</tag>
+      </item>
+      <item>
+        Wyłącz nagrywanie<tag>out="recordingOff"</tag>
+      </item>
+
+      <item>
+        Włącz program tiwi<tag>out="showTelecast"</tag>
+      </item>
+      <item>
+        Pokaż program tiwi<tag>out="showTelecast"</tag>
+      </item>
+
+      <item>
+        Wyłącz program tiwi<tag>out="hideTelecast"</tag>
+      </item>
+      <item>
+        Schowaj program tiwi<tag>out="hideTelecast"</tag>
+      </item>
+
+      <item>
+        Pokaż listę kanałów<tag>out="showChannelList"</tag>
+      </item>
+      
+      <item>
+        Schowaj listę kanałów<tag>out="hideChannelList"</tag>
+      </item>
+
+      <item>
+        Co teraz leci<tag>out="showDescription"</tag>
+      </item>
+      <item>
+        Co jest grane<tag>out="showDescription"</tag>
+      </item>
+
+      <item>
+        Schowaj opis<tag>out="hideDescription"</tag>
+      </item>
+
+      <item>
+        Wyłącz telewizor<tag>out="turnOffTV"</tag>
+      </item>
+      <item>
+        Wyłącz telewizję<tag>out="turnOffTV"</tag>
+      </item>
+
+       <item>
+        Włącz telewizor<tag>out="turnOnTV"</tag>
+      </item>
+      <item>
+        Włącz telewizję<tag>out="turnOnTV"</tag>
+      </item>
+
+      <item>
+        Jakie są komendy<tag>out="help"</tag>
+      </item>
+      <item>
+        Lista komend<tag>out="help"</tag>
+      </item>
+      <item>
+        Podaj listę komend<tag>out="help"</tag>
+      </item>
+      <item>
+        Jaka jest lista komend<tag>out="help"</tag>
+      </item> 
+      
+       <item>
+            Schowaj listę komend<tag>out="nohelp"</tag>
+      </item>  
+      
+      <item>
+        Wyłącz listę komend<tag>out="nohelp"</tag>
+      </item>  
+    
+       <item>
+        Dodaj kanał do ulubionych<tag>out="addtofav"</tag>
+      </item>  
+      
+      <item>
+        Usuń kanał z ulubionych<tag>out="deletefromfav"</tag>
+      </item>    
+    
+    </one-of>
+  </rule>
+
+  <rule id="volumeValue">
+    <one-of>
+      <item>
+        dziesięć<tag>out=10</tag>
+      </item>
+      <item>
+        dwadzieścia<tag>out=20</tag>
+      </item>
+      <item>
+        trzydzieści<tag>out=30</tag>
+      </item>
+      <item>
+        czterdzieści<tag>out=40</tag>
+      </item>
+      <item>
+        pięćdziesiąt<tag>out=50</tag>
+      </item>
+      <item>
+        sześćdziesiąt<tag>out=60</tag>
+      </item>
+      <item>
+        siedemdziesiąt<tag>out=70</tag>
+      </item>
+      <item>
+        osiemdziesiąt<tag>out=80</tag>
+      </item>
+      <item>
+        dziewięćdziesiąt<tag>out=90</tag>
+      </item>
+      <item>
+        sto<tag>out=100</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="channelList">
+    <one-of>
+      <item>
+        pierwszy<tag>out=1</tag>
+      </item>
+      <item>
+        drugi<tag>out=2</tag>
+      </item>
+      <item>
+        trzeci<tag>out=3</tag>
+      </item>
+      <item>
+        czwarty<tag>out=4</tag>
+      </item>
+      <item >
+        piąty<tag>out=5</tag>
+      </item>
+      <item>
+        szósty<tag>out=6</tag>
+      </item>
+      <item>
+        siódmy<tag>out=7</tag>
+      </item>
+      <item>
+        ósmy<tag>out=8</tag>
+      </item>
+      <item>
+        dziewiąty<tag>out=9</tag>
+      </item>
+      <item>
+        dziesiąty<tag>out=10</tag>
+      </item>
+      <item>
+        jedenasty<tag>out=11</tag>
+      </item>
+      <item>
+        dwunasty<tag>out=12</tag>
+      </item>
+      <item>
+        trzynasty<tag>out=13</tag>
+      </item>
+      <item>
+        czternasty<tag>out=14</tag>
+      </item>
+      <item>
+        piętnasty<tag>out=15</tag>
+      </item>
+      <item>
+        następny<tag>out=0</tag>
+      </item>
+      <item>
+        poprzedni<tag>out=-1</tag>
+      </item>
+    </one-of>
+  </rule>
+  
+</grammar>

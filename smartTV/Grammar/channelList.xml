@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="pl-PL" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <rule id="rootRule">
+    <item repeat="0-1">na</item>
+    <ruleref uri="#channelNumber" />
+    <tag> out.channelNumber=rules.latest(); </tag>
+  </rule>
+
+  <rule id="channelNumber">
+    <one-of>
+      <item repeat="0-1">
+        pierwszy<tag>out=1</tag>
+      </item>
+      <item repeat="0-1">
+        drugi<tag>out=2</tag>
+      </item>
+      <item repeat="0-1">
+        trzeci<tag>out=3</tag>
+      </item>
+      <item repeat="0-1">
+        czwarty<tag>out=4</tag>
+      </item>
+      <item repeat="0-1">
+        piąty<tag>out=5</tag>
+      </item>
+      <item repeat="0-1">
+        szósty<tag>out=6</tag>
+      </item>
+      <item repeat="0-1">
+        siódmy<tag>out=7</tag>
+      </item>
+      <item repeat="0-1">
+        ósmy<tag>out=8</tag>
+      </item>
+      <item repeat="0-1">
+        dziewiąty<tag>out=9</tag>
+      </item>
+      <item repeat="0-1">
+        dziesiąty<tag>out=10</tag>
+      </item>
+      <item repeat="0-1">
+        jedenasty<tag>out=11</tag>
+      </item>
+      <item repeat="0-1">
+        dwunasty<tag>out=12</tag>
+      </item>
+      <item repeat="0-1">
+        trzynasty<tag>out=13</tag>
+      </item>
+      <item repeat="0-1">
+        czternasty<tag>out=14</tag>
+      </item>
+      <item repeat="0-1">
+        piętnasty<tag>out=15</tag>
+      </item>
+      <item repeat="0-1">
+        następny<tag>out=0</tag>
+      </item>
+      <item repeat="0-1">
+        poprzedni<tag>out=-1</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>
